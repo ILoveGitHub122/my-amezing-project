@@ -1,0 +1,31 @@
+body {
+    background-color: #832424;
+    color: white;
+  }
+  
+#terms {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  #accept-btn {
+    background-color: #c53838;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
