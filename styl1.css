@@ -32,6 +32,12 @@ body {
     margin-top: 10px;
     box-sizing: border-box;
   }
+
+   settings-btn {
+       position: absolute;
+       right: 30px;
+       top: 30px;
+       padding: 10px 20px;
   
   .premium-button {
     position: absolute;
