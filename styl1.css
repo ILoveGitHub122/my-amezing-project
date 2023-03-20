@@ -10,15 +10,6 @@ body {
     padding: 10px;
     border-radius: 5px;
   }
-  
-  button {
-    background-color: #c53838;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
 
   textarea {
     width: 100%;
