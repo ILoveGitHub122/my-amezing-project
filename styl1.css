@@ -42,11 +42,11 @@ body {
     cursor: pointer;
   }
 
-  button {
-    background-color: #c53838;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
+.button {
+  background-color: #c53838; /* lägg till din önskade bakgrundsfärg */
+  color: white; /* lägg till din önskade textfärg */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+    
