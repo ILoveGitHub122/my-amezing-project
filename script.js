@@ -9,7 +9,8 @@ form.addEventListener("submit", event => {
   if (!message) return;
   
   const newMessage = document.createElement("div");
-  newMessage.classList.add("message");
+  newMessage.classList.add("message")
+  alert("Hello! I am an alert box!!");
   
   const messageText = document.createElement("p");
   messageText.textContent = message;
