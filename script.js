@@ -10,7 +10,7 @@ form.addEventListener("submit", event => {
   
   const newMessage = document.createElement("div");
   newMessage.classList.add("message")
-  alert("Hello! I am an alert box!!");
+  alert("Meddelande är skickat! Tryck på OK för att skicka.");
   
   const messageText = document.createElement("p");
   messageText.textContent = message;
