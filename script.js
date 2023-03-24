@@ -123,6 +123,16 @@ buttonContainer.appendChild(commentButton);
 
 newMessage.appendChild(messageText);
 newMessage.appendChild(buttonContainer);
+     
+     // Hämta knappen
+var btn = document.getElementById("settings-btn");
+
+// Lägg till en klick-händelse till knappen
+btn.addEventListener("click", function(){
+	// Uppdatera sidan
+	location.reload();
+});
+
 
 });
 });
