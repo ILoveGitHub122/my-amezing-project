@@ -2,6 +2,24 @@ body {
     background-color: #832424;
     color: #fff;
   }
+
+  .container1 {
+    position: fixed;
+    bottom: 0;
+    right: 75;
+    margin: 20px;
+    font-size: 12px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+  }
   
   .message {
     background-color: #491414;
@@ -9,6 +27,73 @@ body {
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
+  }
+  
+  .message1 {
+    background-color: #2c3e50;
+    color: #ffffff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .button3 {
+    background-color: #38c557;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  #hideBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .button2 {
+    background-color: #385ec5;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .button1 {
+    background-color: #c53838;
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button {
+    background-color: #c53838;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  #code {
+    font-size: 10px;
+    margin-top: 10px;
+    cursor: pointer;
   }
 
   textarea {
@@ -23,7 +108,7 @@ body {
     margin-top: 10px;
     box-sizing: border-box;
   }
-
+  
   .premium-button {
     position: absolute;
     right: 20px;
@@ -36,11 +121,23 @@ body {
     cursor: pointer;
   }
 
- button {
-  background-color: #c53838; /* lägg till din önskade bakgrundsfärg */
-  color: white; /* lägg till din önskade textfärg */
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-    
+  button {
+    background-color: #c53838;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  #discord-link {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+  }
+  
+  #discord-link:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
