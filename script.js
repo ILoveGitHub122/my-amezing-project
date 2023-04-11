@@ -20,6 +20,39 @@ form.addEventListener("submit", event => {
     messageBoard.appendChild(messageBoard.removeChild(newMessage));
   });
 
+    // Generera en slumpmässig kod i formatet "ABC#123".
+function generateCode() {
+  var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var numbers = '0123456789';
+  var code = '';
+
+  for (var i = 0; i < 3; i++) {
+    code += letters.charAt(Math.floor(Math.random() * letters.length));
+  }
+
+  code += '#';
+
+  for (var i = 0; i < 3; i++) {
+    code += numbers.charAt(Math.floor(Math.random() * numbers.length));
+  }
+
+  return code;
+}
+
+// Hämta kod från webbläsarens lokal lagring, om det finns en sparad.
+var code = localStorage.getItem('code');
+
+if (!code) {
+  // Om det inte finns någon sparad kod, generera en ny och spara den.
+  code = generateCode();
+  localStorage.setItem('code', code);
+}
+
+// Visa koden på sidan.
+var codeElement = document.getElementById('code');
+codeElement.innerHTML = code;
+
+
   const commentForm = document.createElement("form");
   commentForm.classList.add("comment-form");
   const commentInput = document.createElement("input");
@@ -44,95 +77,98 @@ form.addEventListener("submit", event => {
   });
 
   newMessage.appendChild(messageText);
-  newMessage.appendChild(likeButton);
-  newMessage.appendChild(commentForm);
+
+  // Lägg till en kommentarsformulär och en gilla-knapp
+  const buttonContainer = document.createElement("div");
+  buttonContainer.classList.add("button-container");
+  buttonContainer.appendChild(likeButton);
+
+  // Lägg till en klickhändelse till kommentera-knappen
+  commentButton.addEventListener("click", () => {
+    if (commentForm.style.display === "none" || !commentForm.style.display) {
+      commentForm.style.display = "block";
+    } else {
+      const commentText = commentInput.value;
+      if (!commentText) return;
+
+      const newComment = document.createElement("li");
+      newComment.textContent = commentText;
+      commentList.appendChild(newComment);
+      commentInput.value = "";
+    }
+  });
+
+  buttonContainer.appendChild(commentButton);
+  newMessage.appendChild(buttonContainer);
   commentForm.appendChild(commentInput);
   commentForm.appendChild(commentButton);
+  newMessage.appendChild(commentForm);
   newMessage.appendChild(commentList);
 
   messageBoard.appendChild(newMessage);
 
   form.reset();
 
-  const postSection = document.querySelector('.post-section');
-  const premiumButton = document.createElement('button');
-   premiumButton.innerHTML = "Upgrade to Premium";
-   premiumButton.classList.add('premium-button');
-   postSection.appendChild(premiumButton);
+  // Generera en slumpmässig kod i formatet "ABC#123".
+function generateCode() {
+  var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var numbers = '0123456789';
+  var code = '';
 
-   premiumButton.addEventListener('click', () => {
-   window.location.href = "premium.html";
-   });
-
-   const textarea = document.getElementById("textarea");
-
-   textarea.addEventListener("keyup", function(event) {
-   if (event.target.value.includes("#rykte")) {
-    const message = document.createElement("div");
-    message.textContent = event.target.value;
-    message.classList.add("message1");
-    document.body.appendChild(message);
-    event.target.value = "";
+  for (var i = 0; i < 3; i++) {
+    code += letters.charAt(Math.floor(Math.random() * letters.length));
   }
-     
-     // Skapa kommentarknapp
-const commentButton = document.createElement("button");
-commentButton.textContent = "Kommentera";
-commentButton.addEventListener("click", () => {
-  const commentInput = document.createElement("input");
-  commentInput.setAttribute("type", "text");
-  commentInput.setAttribute("placeholder", "Skriv din kommentar...");
-  commentInput.classList.add("comment-input");
 
-  const commentSubmit = document.createElement("button");
-  commentSubmit.textContent = "Skicka";
-  commentSubmit.classList.add("comment-submit");
+  code += '#';
 
-  const commentContainer = document.createElement("div");
-  commentContainer.classList.add("comment-container");
-  commentContainer.appendChild(commentInput);
-  commentContainer.appendChild(commentSubmit);
+  for (var i = 0; i < 3; i++) {
+    code += numbers.charAt(Math.floor(Math.random() * numbers.length));
+  }
 
-  newMessage.appendChild(commentContainer);
+  return code;
+}
 
-  commentSubmit.addEventListener("click", () => {
-    const commentText = commentInput.value;
-    if (!commentText) return;
+// Hämta kod från webbläsarens lokal lagring, om det finns en sparad.
+var code = localStorage.getItem('code');
 
-    const comment = document.createElement("div");
-    comment.classList.add("comment");
-    comment.textContent = commentText;
-    commentContainer.appendChild(comment);
-    commentInput.value = "";
-  });
-});
+if (!code) {
+  // Om det inte finns någon sparad kod, generera en ny och spara den.
+  code = generateCode();
+  localStorage.setItem('code', code);
+}
 
-// Lägg till kommentarknapp bredvid gilla-knappen
-const likeButton = document.createElement("button");
-likeButton.textContent = "Gilla";
-likeButton.classList.add("like-button");
-likeButton.addEventListener("click", () => {
-  likeButton.textContent = `Gillade (${parseInt(likeButton.textContent.split(" ")[1] || 0) + 1})`;
-  messageBoard.appendChild(messageBoard.removeChild(newMessage));
-});
+// Visa koden på sidan.
+var codeElement = document.getElementById('code');
+codeElement.innerHTML = code;
 
-const buttonContainer = document.createElement("div");
-buttonContainer.classList.add("button-container");
-buttonContainer.appendChild(likeButton);
-buttonContainer.appendChild(commentButton);
+function copyCode() {
+  let code = document.getElementById("code").textContent;
+  navigator.clipboard.writeText(code);
+  alert("Koden är kopierad!");
+  let userId = getUserId(); // anropar en funktion för att hämta användar-ID
+  location.href = "/users/" + userId;
+}
 
-newMessage.appendChild(messageText);
-newMessage.appendChild(buttonContainer);
-     
-     // Hämta knappen
-var btn = document.getElementById("settings-btn");
+function getUserId() {
+  return fetch('/api/user') // anpassa sökvägen till din API-endpoint
+    .then(response => response.json())
+    .then(data => {
+      return data.userId;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
 
-// Lägg till en klick-händelse till knappen
-btn.addEventListener("click", function(){
-	// Uppdatera sidan
-	location.reload();
-});
+function hideCode() {
+  let hideBtn = document.getElementById("hideBtn");
+  let addFriendBtn = document.getElementById("addFriendBtn");
+  let code = document.getElementById("code");
+  hideBtn.style.display = "none";
+  addFriendBtn.style.display = "none";
+  code.style.display = "none";
+}
 
 
 });
-});
+
