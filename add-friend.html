@@ -2,26 +2,58 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="font.css">
-    <link rel="stylesheet" type="text/css" href="styl1.css">
-    <link rel="icon" href="SharedScreenshot.png" type="image/png">
-    <title>HATE.ME - ADD FRIENDS</title>
+    <title>HATE.ME</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 50px;
+        background-color: white;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+      
+        .p1 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+      }
+      
+      p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+      }
+      .loader {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #832424;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+        margin: 0 auto;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
   </head>
   <body>
-    <header>
-        <h1>Add Hate Friend</h1>
-        <p>Så här lägger du till vänner du kan hata med!</p>
-        <h3>Så här lägger du till en vänner</h3>
-        <ul>
-            <li>1. Under knappen där det står ett ID, exempel: ABC123.</li>
-            <li>2. Gå tillbaka och sen tryck på id:et och tryck på "Add Hate Friend"</li>
-            <li>3. Sen så skriver du in id:et i rutan under och trycker på knappen brevid rutan.</li>
-        </ul>
-        <form>
-        <textarea name="enter" id="enter" rows="1" cols="50" placeholder="ENTER FRIENDS ID..." maxlength="7"></textarea>
-        <input type="checkbox">Jag godkänner <a href="body.html">regler & villkor</a>
-        <p> </p>
-        <input type="submit" class="button1" value="Ok">
-        </form>
-    </header>
-    
+    <div class="container">
+      <p>While you wait, play our game - <a href="game.html">Press here to play</a>.</p>
+      <h1>You are in cue!</h1>
+      <p>We're sorry, but HATE.ME is currently unable to accept new groups - it's too many!. Please try again later.</p>
+      <div class="loader"></div>
+    </div>
+    <div class="container"><p>&copy; HATE.ME</p>
+      <a href="#">Contact us</a> - <a href="#">Help</a> - <a href="#">Terms & policy</a>
+    </div>
+  </body>
+</html>
