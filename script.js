@@ -1,3 +1,17 @@
+const cookieContainer = document.getElementById("cookie-container");
+const cookieBtn = document.getElementById("cookie-btn");
+
+cookieBtn.addEventListener("click", () => {
+  cookieContainer.remove();
+  // Spara information om att användaren har godkänt cookies
+  localStorage.setItem("cookieAccepted", true);
+});
+
+// Visa cookies rutan om användaren inte har godkänt cookies
+if (!localStorage.getItem("cookieAccepted")) {
+  cookieContainer.style.display = "flex";
+}
+
 const form = document.querySelector("#message-form");
 const messageBoard = document.querySelector("#message-board");
 
@@ -168,6 +182,50 @@ function hideCode() {
   addFriendBtn.style.display = "none";
   code.style.display = "none";
 }
+
+var img = document.getElementById('fullscreen-img');
+
+document.addEventListener('keydown', function(event) {
+	if (event.key === ',') {
+		if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+			img.style.display = 'none';
+			if (document.exitFullscreen) {
+				document.exitFullscreen();
+			} else if (document.mozCancelFullScreen) { /* Firefox */
+				document.mozCancelFullScreen();
+			} else if (document.webkitExitFullscreen) { /* Chrome, Safari & Opera */
+				document.webkitExitFullscreen();
+			} else if (document.msExitFullscreen) { /* IE/Edge */
+				document.msExitFullscreen();
+			}
+		} else {
+			img.style.display = 'block';
+			if (img.requestFullscreen) {
+				img.requestFullscreen();
+			} else if (img.mozRequestFullScreen) { /* Firefox */
+				img.mozRequestFullScreen();
+			} else if (img.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+				img.webkitRequestFullscreen();
+			} else if (img.msRequestFullscreen) { /* IE/Edge */
+				img.msRequestFullscreen();
+			}
+		}
+	}
+});
+
+document.addEventListener('fullscreenchange', hideImage);
+document.addEventListener('webkitfullscreenchange', hideImage);
+document.addEventListener('mozfullscreenchange', hideImage);
+document.addEventListener('MSFullscreenChange', hideImage);
+
+function hideImage() {
+	if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+		img.style.display = 'block';
+	} else {
+		img.style.display = 'none';
+	}
+}
+
 
 
 });
