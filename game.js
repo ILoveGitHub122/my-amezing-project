@@ -1,9 +1,9 @@
 const quotes = [
-  "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-  "The way to get started is to quit talking and begin doing.",
-  "Your time is limited, don't waste it living someone else's life.",
-  "If life were predictable it would cease to be life, and be without flavor.",
-  "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough."
+  "Den största äran i att leva ligger inte i att aldrig falla, utan i att stiga varje gång vi faller.",
+  "Sättet att komma igång är att sluta prata och börja göra.",
+  "Din tid är begränsad, slösa inte bort den på att leva någon annans liv.",
+  "Om livet var förutsägbart skulle det upphöra att vara liv och vara utan smak.",
+  "Om du tittar på vad du har i livet, kommer du alltid att ha mer. Om du tittar på vad du inte har i livet kommer du aldrig att få nog."
 ];
 
 let quoteIndex, startTime;
