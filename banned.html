@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+<style>
+.material-symbols-outlined {
+  margin-left: 50%;
+    font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.title {
+    font-family: Montserrat, sans-serif;
+    font-size: 55px;
+    color: #c53838;
+    text-align: center;
+}
+
+.refresh {
+    border: none;
+    color: #c53838;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 46%;
+}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    </head>
+    <body>
+        <h1 class="title">Något fel har hänt</h1>
+        <input type="button" value="Ladda om sidan" class="refresh" id="refresh">
+    </body>
+    <script>
+var refresh = document.getElementById("refresh");
+
+laddaOmKnapp.addEventListener("click", function() {
+    location.reload(); 
+});
+
+    </script>
+</html>
