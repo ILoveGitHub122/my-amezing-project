@@ -2,78 +2,6 @@ body {
     background-color: #832424;
     color: #fff;
   }
-
-#popupContainer {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 1000%;
-    height: 1000%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1200;
-}
-
-#popupBox {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 60px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    z-index: 1001;
-}
-
-.closeButton {
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    color: #000;
-    transition: transform 0.2s ease-in-out;
-}
-
-.closeButton:hover {
-    transform: scale(1.2);
-}
-
-.postInputContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.message {
-  font-family: Montserrat, sans-serif;
-  font-size: 25px;
-  text-align: center;
-    width: 1px;
-    padding: 70px 150px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    outline: none;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #491414;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-
   .container1 {
     position: fixed;
     bottom: 0;
@@ -85,12 +13,19 @@ button:hover {
     border: none;
     cursor: pointer;
   }
-
   .container {
     position: fixed;
     bottom: 0;
     right: 0;
     margin: 20px;
+  }
+  
+  .message {
+    background-color: #491414;
+    color: #ffffff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
   }
   
   .message1 {
@@ -100,6 +35,7 @@ button:hover {
     padding: 10px;
     border-radius: 5px;
   }
+
 /*this button does xxxxx*/
   .button3 {
     background-color: #38c557;
@@ -110,7 +46,6 @@ button:hover {
     padding: 5px 10px;
     cursor: pointer;
   }
-
   #hideBtn {
     position: absolute;
     top: 0;
@@ -124,7 +59,6 @@ button:hover {
     cursor: pointer;
     border-radius: 4px;
   }
-
   .button2 {
     background-color: #385ec5;
     color: #fff;
@@ -134,7 +68,6 @@ button:hover {
     padding: 5px 10px;
     cursor: pointer;
   }
-
   .button1 {
     background-color: #c53838;
     color: #fff;
@@ -153,13 +86,11 @@ button:hover {
     padding: 5px 10px;
     cursor: pointer;
   }
-
   #code {
     font-size: 10px;
     margin-top: 10px;
     cursor: pointer;
   }
-
   textarea {
     width: 100%;
     height: 100px;
@@ -184,7 +115,6 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
   }
-
   button {
     background-color: #c53838;
     color: #fff;
@@ -193,7 +123,6 @@ button:hover {
     padding: 10px 20px;
     cursor: pointer;
   }
-
   #discord-link {
     display: block;
     margin: 0 auto;
@@ -218,7 +147,6 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
-
 #cookie-content {
   font-family: 'Open Sans', sans-serif;
   background: #491414;
@@ -227,11 +155,9 @@ button:hover {
   max-width: 500px;
   text-align: center;
 }
-
 #cookie-content h2 {
   margin-top: 0;
 }
-
 #cookie-btn {
   background: #c53838;
   color: #fff;
