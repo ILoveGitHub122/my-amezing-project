@@ -13,6 +13,11 @@ body {
     border: none;
     cursor: pointer;
   }
+
+a {
+color: white;
+}
+
   .container {
     position: fixed;
     bottom: 0;
